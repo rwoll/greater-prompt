@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../assets/custom.css?t=de6ee9d9">
+    <script src="../assets/script.js?t=42463e55"></script>
+    <title>Cue Sheet Composition - greater-prompt</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../index.html">greater-prompt</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Installation</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-installationdependencies" href="../installation/DEPENDENCIES.html">Installing Dependencies</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-installationcli" href="../installation/CLI.html">CLI Setup</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Usage</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title -active link-usagecue_sheet_composition" href="../usage/CUE_SHEET_COMPOSITION.html">Cue Sheet Composition</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a class="hlink link-intro" href="#intro">Intro</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-whitespace-sensitivity" href="#whitespace-sensitivity">Whitespace Sensitivity</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-anatomy-of-a-cue-sheet" href="#anatomy-of-a-cue-sheet">Anatomy of a Cue Sheet</a>
+                      <ul class="heading-list -depth-2">
+                        <li class="heading-item -depth-3"><a class="hlink link-character(s)-declaration-block" href="#character(s)-declaration-block">Character(s) Declaration Block</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-department(s)-declaration-block" href="#department(s)-declaration-block">Department(s) Declaration Block</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-act-declaration-block(s)" href="#act-declaration-block(s)">Act Declaration Block(s)</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-scene-declaration-block(s)" href="#scene-declaration-block(s)">Scene Declaration Block(s)</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-cue-group-declaration(s)" href="#cue-group-declaration(s)">Cue Group Declaration(s)</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-cue-declaration(s)" href="#cue-declaration(s)">Cue Declaration(s)</a>
+                        </li>
+                        <li class="heading-item -depth-3"><a class="hlink link-end-block" href="#end-block">End Block</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-quick-example" href="#quick-example">Quick Example</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-usagecue_sheet_running" href="../usage/CUE_SHEET_RUNNING.html">Cue Sheet Running</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-usagepdf_generation" href="../usage/PDF_GENERATION.html">PDF Generation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Errors</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-errorsintro" href="../errors/INTRO.html">What the @%^!?</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-errorserrors" href="../errors/ERRORS.html">Errors Explained</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Design Principles</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-designintro" href="../design/INTRO.html">Introduction</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-designlanguage_design_details" href="../design/LANGUAGE_DESIGN_DETAILS.html">Language Design Details</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-designexample_programs" href="../design/EXAMPLE_PROGRAMS.html">Example Programs</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-designlanguage_implementation" href="../design/LANGUAGE_IMPLEMENTATION.html">Language Implementation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-designevaluation" href="../design/EVALUATION.html">Evaluation</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-usagecue_sheet_composition">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/rwoll/project" data-title="rwoll/project">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="cue-sheet-composition">Cue Sheet Composition</h1>
+<h2 id="intro">Intro</h2>
+<p>In order to use &gt; Prompt, you simply compose cue sheets in a text file. The
+&gt; Prompt language and syntax is meant to make it easy to specify where cues
+should be placed in a script without the need to overspecify.</p>
+<h2 id="whitespace-sensitivity">Whitespace Sensitivity</h2>
+<p>&gt; Prompt is an extremely whitespace sensitive language by design. In order to
+ensure best formatting practices by users and to ensure that raw cue sheet text
+files are easy to read by a human, you must have newlines in exact locations and
+use proper indentation as outlined below. <strong><em>The only place that whitespace is
+ignored is at the end of the line.</em></strong></p>
+<p>Yes, this does make it slightly harder to write at first, but the rules are
+straightforward as you&apos;ll see below.</p>
+<blockquote>
+<p>&#x1F440; In an ideal version of this project, we would make available a formatting
+tool that would take a flexibly spaced language and autoformat it.</p>
+</blockquote>
+<h2 id="anatomy-of-a-cue-sheet">Anatomy of a Cue Sheet</h2>
+<ul>
+<li><a href="#character(s)-declaration-block"><strong>Character(s) Declaration Block</strong></a>:<br>
+Declare any characters that appear in the script that you will reference throughout
+your cues. (e.g. <code>@HAMLET</code>, <code>@POLONIUS</code>, etc.)</li>
+<li><a href="#department(s)-declaration-block"><strong>Department(s) Declaration Block</strong></a>:<br>
+Declare any departments you may reference in your cues like lights, sound, etc.
+(e.g. <code>#LX</code>, <code>#SD</code>, <code>#BACKSTAGE</code>, etc.)</li>
+<li><a href="#act-declaration-block(s)"><strong>Act Declaration Block(s)</strong></a>:<br>
+Add declarations for any acts in the script that have scenes with cues.
+<ul>
+<li><a href="#scene-declaration-block(s)"><strong>Scene Declaration Block(s)</strong></a>:<br>
+Add declarations for any scenes in the script that have cue points in them.
+<ul>
+<li><a href="#cue-group-declaration(s)"><strong>Cue Group Declaration(s)</strong></a>:<br>
+Specify where in the scene a group of cues should be called: either at a
+line or an entrance/exit.
+<ul>
+<li><a href="#cue-declaration(s)"><strong>Cue Declaration(s)</strong></a>:<br>
+Specify the actual cues to be called on a department level.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#end-block"><strong>End Block and Notes</strong></a></li>
+</ul>
+<h3 id="character(s)-declaration-block">Character(s) Declaration Block</h3>
+<p>The character declaration block should be the first block to appear in your file.
+The word <code>Characters:</code> should appear on the first line flush with left side
+of the page. On a new line each, the name of a character should appear <strong>indented
+with 2 spaces</strong>, beginning with a <code>@</code>, and only containing upper case letters <code>A-Z</code>
+as well as underscores (<code>_</code>).</p>
+<pre><code>Characters:
+  @HAMLET
+  @POLONIUS
+</code></pre>
+<blockquote>
+<p>&#x1F440; You do not need to declare all the characters in the script; however,
+you must declare any character you reference in a cue placement. This is done
+to avoid typos.</p>
+</blockquote>
+<p><strong>After the block of characters, you must have one blank newline.</strong></p>
+<h3 id="department(s)-declaration-block">Department(s) Declaration Block</h3>
+<p>The department declaration block should be the second block to appear in your file.
+The word <code>Departments:</code> should appear flush with left side
+of the page. On a new line each, the name of a department should appear <strong>indented
+with 2 spaces</strong>, beginning with a <code>#</code>, and only containing upper case letters <code>A-Z</code>
+as well as underscores (<code>_</code>).</p>
+<pre><code>Departments:
+  #LX
+  #SD
+  #BACKSTAGE
+  #SPOT_I
+  #SPOT_II
+</code></pre>
+<blockquote>
+<p>&#x26A0;&#xFE0F; Although <code>#SPOT_I</code> and <code>#SPOT_II</code> may be considered part of the
+lighting department (<code>#LX</code>), it is good practice to declare them as separate
+departments, if they will be receiving cues different from one another they
+should be declared separately.</p>
+</blockquote>
+<p><strong>After the block of characters, you must have one blank newline.</strong></p>
+<h3 id="act-declaration-block(s)">Act Declaration Block(s)</h3>
+<p>Next, you should declare any acts that will have cues. For each <code>Act n:</code> where
+<code>n</code> is some integer should appear flush left in the file:</p>
+<pre><code>Act 1:
+Act 30:
+</code></pre>
+<blockquote>
+<p>&#x26A0;&#xFE0F; You must not declare an act unless it will have scenes with cues.</p>
+</blockquote>
+<h3 id="scene-declaration-block(s)">Scene Declaration Block(s)</h3>
+<p>Next, for each scene that will have cues within an act, you should add a line
+indented with 2 spaces containing <code>Scene n:</code> where <code>n</code> is some integer:</p>
+<pre><code>Act 1:
+  Scene 1:
+  Scene 2:
+Act 30:
+  Scene 47:
+</code></pre>
+<blockquote>
+<p>&#x26A0;&#xFE0F; You must not declare a scene unless it will have cues.</p>
+</blockquote>
+<h3 id="cue-group-declaration(s)">Cue Group Declaration(s)</h3>
+<p>A cue group is a natural grouping of individual cues that implies that any child
+cues should be called together at some point in the script. In the current version
+of the language implementation a cue group can be either a line or a visual
+entrance/exit of a character:</p>
+<h4 id="line-cue-group">Line Cue Group</h4>
+<p>Indented 2 spaces from the <code>Scene n:</code> block taking the form of:</p>
+<pre><code>(line) @CHAR_NAME:&quot;part of the line&quot;
+</code></pre>
+<p>where the quoted text should be enough text to uniquely identify the placement
+within the scene. In other words, if <code>@HAMLET</code> says &quot;Hello!&quot; 5 times throughout
+the scene you can disambiguate the placement by using more words from that line.</p>
+<p>In the case where adding more words is not sufficient to disambiguate the placement,
+you can add an index in parenthesis after the line (see below) which is the lines
+index number within a scene:</p>
+<pre><code>(line) @CHAR_NAME:&quot;part of the line&quot; (47)
+</code></pre>
+<blockquote>
+<p>&#x26A0;&#xFE0F; Index style disambiguations should be used only when it is
+absolutely necessary! Prefer to add more words.</p>
+</blockquote>
+<h4 id="visual-line-group">Visual Line Group</h4>
+<p>Indented 2 spaces from the <code>Scene n:</code> block taking the form of:</p>
+<pre><code>(visual) @CHAR_NAME:ENTR
+</code></pre>
+<p>for an entrance. If the cue should be placed at an exit, substitute <code>ENTR</code> for
+<code>EXIT</code>. Like line groups, visual entrance placements can be disambiguated with
+indices:</p>
+<pre><code>(visual) @CHAR_NAME:ENTR (47)
+</code></pre>
+<p>Index disambiguations should only be used when necessary. (The compiler will tell
+to use one if needed).</p>
+<h3 id="cue-declaration(s)">Cue Declaration(s)</h3>
+<p>Under each <a href="#cue-group-declaration(s)">cue group</a> you should place the actual
+cues that should be called to each department. Each should appear on a newline.
+Following the last cue, you should insert a blank newline before adding the next
+group.</p>
+<p>The format is as follows:</p>
+<pre><code>#DEPARTMENT {n} GO &quot;Optional comment.....&quot;
+</code></pre>
+<p>where <code>DEPARTMENT</code> can be replaced by a department you have declared, <code>n</code> is some
+integer identifying the cue number (this is up to you); <code>GO</code> can be substituted
+with <code>STBY</code> (standby), or <code>WARN</code> if you&apos;d like to specify an alternate type of cue.
+Optionally, you can also include a comment enclosed in <code>&quot;</code>s. For example, a warning
+cue might look like this:</p>
+<pre><code>#LX {47} WARN &quot;@HAMLET about to enter stage left&quot;
+</code></pre>
+<p>If you do not have a comment, ommit the quotes:</p>
+<pre><code>#LX {47} WARN
+</code></pre>
+<p>You may have as many cues (1 per department) assigned with a cue group:</p>
+<pre><code>(visual) @HAMLET:ENTR
+  #LX {10} STBY
+  #SD {99} GO &quot;wait a half a beat&quot;
+  #BS {97} WARN
+</code></pre>
+<h3 id="end-block">End Block</h3>
+<p>The file must and with <code>--- END ---</code> flush with the left side of the page. Anything
+after the <code>--- END ---</code> marker will be ignored, so feel free to leave comments
+or notes to yourself after this line!</p>
+<h2 id="quick-example">Quick Example</h2>
+<p>Here is all of the above together:</p>
+<pre><code>Characters:
+  @BARNARDO
+  @POLONIUS
+  @FRANCISCO
+
+Departments:
+  #LX
+  #SD
+  #BS
+
+Act 1:
+  Scene 1:
+    (line) @BARNARDO:&quot;Who&apos;s there?&quot;
+      #LX {1} STBY &quot;t&quot;
+      #SD {1} GO &quot;comment 2&quot;
+      #BS {1} WARN
+
+    (line) @FRANCISCO:&quot;Not a mouse stirring.&quot;
+      #LX {1} GO
+
+Act 2:
+  Scene 1:
+    (line) @POLONIUS:&quot;Give him this money&quot;
+      #LX {2} STBY &quot;this is a comment on this cue&quot;
+      #SD {2} GO &quot;comment 2&quot;
+      #BS {2} WARN
+
+    Scene 2:
+      (line) @POLONIUS:&quot;Give him this money&quot;
+        #LX {3} STBY &quot;this is a comment on this cue&quot;
+        #SD {3} GO &quot;comment 2&quot;
+        #BS {3} WARN
+
+
+--- END ---
+</code></pre>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../installation/CLI.html"><span class="title">CLI Setup</span></a></div>
+          <div class="right"><a href="../usage/CUE_SHEET_RUNNING.html"><span class="label">Next: </span><span class="title">Cue Sheet Running</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -5,16 +5,77 @@
         "title": "greater-prompt",
         "source": "README.md",
         "url": "index.html",
-        "slug": "index"
+        "slug": "index",
+        "headings": [
+          {
+            "title": "Try It Online",
+            "depth": 2,
+            "id": "try-it-online"
+          }
+        ]
       },
       {
         "title": "Installation",
         "sections": [
           {
-            "title": "Installing Dependencies"
+            "title": "Installing Dependencies",
+            "source": "docs/installation/DEPENDENCIES.md",
+            "url": "installation/DEPENDENCIES.html",
+            "slug": "installationdependencies",
+            "headings": [
+              {
+                "title": "Haskell Platform and Cabal",
+                "depth": 2,
+                "id": "haskell-platform-and-cabal",
+                "headings": [
+                  {
+                    "title": "macOS: Homebrew",
+                    "depth": 3,
+                    "id": "macos:-homebrew"
+                  },
+                  {
+                    "title": "Alternative Haskell and Cabal Installs",
+                    "depth": 3,
+                    "id": "alternative-haskell-and-cabal-installs"
+                  }
+                ]
+              },
+              {
+                "title": "(optional) `latexmk`",
+                "depth": 2,
+                "id": "(optional)-latexmk",
+                "headings": [
+                  {
+                    "title": "macOS: Homebrew",
+                    "depth": 3,
+                    "id": "macos:-homebrew"
+                  },
+                  {
+                    "title": "Alternative `latexmk` Installs",
+                    "depth": 3,
+                    "id": "alternative-latexmk-installs"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "title": "CLI Setup"
+            "title": "CLI Setup",
+            "source": "docs/installation/CLI.md",
+            "url": "installation/CLI.html",
+            "slug": "installationcli",
+            "headings": [
+              {
+                "title": "Installing",
+                "depth": 2,
+                "id": "installing"
+              },
+              {
+                "title": "Checking the Installation",
+                "depth": 2,
+                "id": "checking-the-installation"
+              }
+            ]
           }
         ]
       },
@@ -22,13 +83,93 @@
         "title": "Usage",
         "sections": [
           {
-            "title": "Cue Sheet Composition"
+            "title": "Cue Sheet Composition",
+            "source": "docs/usage/CUE_SHEET_COMPOSITION.md",
+            "url": "usage/CUE_SHEET_COMPOSITION.html",
+            "slug": "usagecue_sheet_composition",
+            "headings": [
+              {
+                "title": "Intro",
+                "depth": 2,
+                "id": "intro"
+              },
+              {
+                "title": "Whitespace Sensitivity",
+                "depth": 2,
+                "id": "whitespace-sensitivity"
+              },
+              {
+                "title": "Anatomy of a Cue Sheet",
+                "depth": 2,
+                "id": "anatomy-of-a-cue-sheet",
+                "headings": [
+                  {
+                    "title": "Character(s) Declaration Block",
+                    "depth": 3,
+                    "id": "character(s)-declaration-block"
+                  },
+                  {
+                    "title": "Department(s) Declaration Block",
+                    "depth": 3,
+                    "id": "department(s)-declaration-block"
+                  },
+                  {
+                    "title": "Act Declaration Block(s)",
+                    "depth": 3,
+                    "id": "act-declaration-block(s)"
+                  },
+                  {
+                    "title": "Scene Declaration Block(s)",
+                    "depth": 3,
+                    "id": "scene-declaration-block(s)"
+                  },
+                  {
+                    "title": "Cue Group Declaration(s)",
+                    "depth": 3,
+                    "id": "cue-group-declaration(s)"
+                  },
+                  {
+                    "title": "Cue Declaration(s)",
+                    "depth": 3,
+                    "id": "cue-declaration(s)"
+                  },
+                  {
+                    "title": "End Block",
+                    "depth": 3,
+                    "id": "end-block"
+                  }
+                ]
+              },
+              {
+                "title": "Quick Example",
+                "depth": 2,
+                "id": "quick-example"
+              }
+            ]
           },
           {
-            "title": "Cue Sheet Running"
+            "title": "Cue Sheet Running",
+            "source": "docs/usage/CUE_SHEET_RUNNING.md",
+            "url": "usage/CUE_SHEET_RUNNING.html",
+            "slug": "usagecue_sheet_running",
+            "headings": [
+              {
+                "title": "CLI",
+                "depth": 2,
+                "id": "cli"
+              },
+              {
+                "title": "Example",
+                "depth": 2,
+                "id": "example"
+              }
+            ]
           },
           {
-            "title": "PDF Generation"
+            "title": "PDF Generation",
+            "source": "docs/usage/PDF_GENERATION.md",
+            "url": "usage/PDF_GENERATION.html",
+            "slug": "usagepdf_generation"
           }
         ]
       },
@@ -36,10 +177,73 @@
         "title": "Errors",
         "sections": [
           {
-            "title": "What the @%^!?"
+            "title": "What the @%^!?",
+            "source": "docs/errors/INTRO.md",
+            "url": "errors/INTRO.html",
+            "slug": "errorsintro"
           },
           {
-            "title": "Errors Explained"
+            "title": "Errors Explained",
+            "source": "docs/errors/ERRORS.md",
+            "url": "errors/ERRORS.html",
+            "slug": "errorserrors",
+            "headings": [
+              {
+                "title": "TOC",
+                "depth": 2,
+                "id": "toc"
+              },
+              {
+                "title": "Parsing Errors",
+                "depth": 2,
+                "id": "parsing-errors"
+              },
+              {
+                "title": "`NoMatchError`",
+                "depth": 2,
+                "id": "nomatcherror"
+              },
+              {
+                "title": "`AmbiguousError`",
+                "depth": 2,
+                "id": "ambiguouserror"
+              },
+              {
+                "title": "`DuplicateCharacterDeclaration`",
+                "depth": 2,
+                "id": "duplicatecharacterdeclaration"
+              },
+              {
+                "title": "`DuplicateDepartmentDeclaration`",
+                "depth": 2,
+                "id": "duplicatedepartmentdeclaration"
+              },
+              {
+                "title": "`UndeclaredCharacterError`",
+                "depth": 2,
+                "id": "undeclaredcharactererror"
+              },
+              {
+                "title": "`UndeclaredDepartmentError`",
+                "depth": 2,
+                "id": "undeclareddepartmenterror"
+              },
+              {
+                "title": "`UnkownTargetCharacterError`",
+                "depth": 2,
+                "id": "unkowntargetcharactererror"
+              },
+              {
+                "title": "`OutOfOrderOrDuplicateActError`",
+                "depth": 2,
+                "id": "outoforderorduplicateacterror"
+              },
+              {
+                "title": "`OutOfOrderOrDuplicateSceneError`",
+                "depth": 2,
+                "id": "outoforderorduplicatesceneerror"
+              }
+            ]
           }
         ]
       },
@@ -47,19 +251,181 @@
         "title": "Design Principles",
         "sections": [
           {
-            "title": "Introduction"
+            "title": "Introduction",
+            "source": "docs/design/INTRO.md",
+            "url": "design/INTRO.html",
+            "slug": "designintro",
+            "headings": [
+              {
+                "title": "Motivation",
+                "depth": 2,
+                "id": "motivation"
+              },
+              {
+                "title": "Personal Motivation",
+                "depth": 2,
+                "id": "personal-motivation"
+              },
+              {
+                "title": "What's a Prompt Book?",
+                "depth": 2,
+                "id": "what's-a-prompt-book"
+              },
+              {
+                "title": "Benefits",
+                "depth": 2,
+                "id": "benefits",
+                "headings": [
+                  {
+                    "title": "Best Practices",
+                    "depth": 3,
+                    "id": "best-practices"
+                  },
+                  {
+                    "title": "Save Time",
+                    "depth": 3,
+                    "id": "save-time"
+                  },
+                  {
+                    "title": "No More Excel Sheets",
+                    "depth": 3,
+                    "id": "no-more-excel-sheets"
+                  },
+                  {
+                    "title": "Easy to Learn",
+                    "depth": 3,
+                    "id": "easy-to-learn"
+                  },
+                  {
+                    "title": "Color Coded PDFs",
+                    "depth": 3,
+                    "id": "color-coded-pdfs"
+                  },
+                  {
+                    "title": "Fast",
+                    "depth": 3,
+                    "id": "fast"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "title": "Language Design Details"
+            "title": "Language Design Details",
+            "source": "docs/design/LANGUAGE_DESIGN_DETAILS.md",
+            "url": "design/LANGUAGE_DESIGN_DETAILS.html",
+            "slug": "designlanguage_design_details",
+            "headings": [
+              {
+                "title": "Data Interpretation",
+                "depth": 2,
+                "id": "data-interpretation"
+              },
+              {
+                "title": "Syntax Design",
+                "depth": 2,
+                "id": "syntax-design"
+              },
+              {
+                "title": "CLI",
+                "depth": 2,
+                "id": "cli"
+              },
+              {
+                "title": "Control Flow",
+                "depth": 2,
+                "id": "control-flow"
+              },
+              {
+                "title": "Footnotes",
+                "depth": 2,
+                "id": "footnotes"
+              }
+            ]
           },
           {
-            "title": "Example Programs"
+            "title": "Example Programs",
+            "source": "docs/design/EXAMPLE_PROGRAMS.md",
+            "url": "design/EXAMPLE_PROGRAMS.html",
+            "slug": "designexample_programs",
+            "headings": [
+              {
+                "title": "Defining Characters",
+                "depth": 2,
+                "id": "defining-characters"
+              },
+              {
+                "title": "Defining Departments",
+                "depth": 2,
+                "id": "defining-departments"
+              },
+              {
+                "title": "Adding Cues",
+                "depth": 2,
+                "id": "adding-cues"
+              },
+              {
+                "title": "Running",
+                "depth": 2,
+                "id": "running"
+              },
+              {
+                "title": "What next?",
+                "depth": 2,
+                "id": "what-next"
+              }
+            ]
           },
           {
-            "title": "Language Implementation"
+            "title": "Language Implementation",
+            "source": "docs/design/LANGUAGE_IMPLEMENTATION.md",
+            "url": "design/LANGUAGE_IMPLEMENTATION.html",
+            "slug": "designlanguage_implementation",
+            "headings": [
+              {
+                "title": "Host Language",
+                "depth": 2,
+                "id": "host-language"
+              },
+              {
+                "title": "Running a Program",
+                "depth": 2,
+                "id": "running-a-program",
+                "headings": [
+                  {
+                    "title": "Parsing",
+                    "depth": 3,
+                    "id": "parsing"
+                  },
+                  {
+                    "title": "Handling Errors",
+                    "depth": 3,
+                    "id": "handling-errors"
+                  },
+                  {
+                    "title": "`CueScript` Data Structure",
+                    "depth": 3,
+                    "id": "cuescript-data-structure"
+                  },
+                  {
+                    "title": "`PromptScript` Data Structure",
+                    "depth": 3,
+                    "id": "promptscript-data-structure"
+                  },
+                  {
+                    "title": "Cue Resolution Logic",
+                    "depth": 3,
+                    "id": "cue-resolution-logic"
+                  }
+                ]
+              }
+            ]
           },
           {
-            "title": "Evaluation"
+            "title": "Evaluation",
+            "source": "docs/design/EVALUATION.md",
+            "url": "design/EVALUATION.html",
+            "slug": "designevaluation"
           }
         ]
       }
@@ -70,12 +436,453 @@
       "source": "README.md",
       "title": "greater-prompt",
       "pageTitle": "greater-prompt",
-      "slug": "index"
+      "slug": "index",
+      "headings": [
+        {
+          "title": "Try It Online",
+          "depth": 2,
+          "id": "try-it-online"
+        }
+      ]
+    },
+    "installation/DEPENDENCIES.html": {
+      "source": "docs/installation/DEPENDENCIES.md",
+      "title": "Installing Dependencies - greater-prompt",
+      "pageTitle": "Installing Dependencies",
+      "slug": "installationdependencies",
+      "headings": [
+        {
+          "title": "Haskell Platform and Cabal",
+          "depth": 2,
+          "id": "haskell-platform-and-cabal",
+          "headings": [
+            {
+              "title": "macOS: Homebrew",
+              "depth": 3,
+              "id": "macos:-homebrew"
+            },
+            {
+              "title": "Alternative Haskell and Cabal Installs",
+              "depth": 3,
+              "id": "alternative-haskell-and-cabal-installs"
+            }
+          ]
+        },
+        {
+          "title": "(optional) `latexmk`",
+          "depth": 2,
+          "id": "(optional)-latexmk",
+          "headings": [
+            {
+              "title": "macOS: Homebrew",
+              "depth": 3,
+              "id": "macos:-homebrew"
+            },
+            {
+              "title": "Alternative `latexmk` Installs",
+              "depth": 3,
+              "id": "alternative-latexmk-installs"
+            }
+          ]
+        }
+      ]
+    },
+    "installation/CLI.html": {
+      "source": "docs/installation/CLI.md",
+      "title": "CLI Setup - greater-prompt",
+      "pageTitle": "CLI Setup",
+      "slug": "installationcli",
+      "headings": [
+        {
+          "title": "Installing",
+          "depth": 2,
+          "id": "installing"
+        },
+        {
+          "title": "Checking the Installation",
+          "depth": 2,
+          "id": "checking-the-installation"
+        }
+      ]
+    },
+    "usage/CUE_SHEET_COMPOSITION.html": {
+      "source": "docs/usage/CUE_SHEET_COMPOSITION.md",
+      "title": "Cue Sheet Composition - greater-prompt",
+      "pageTitle": "Cue Sheet Composition",
+      "slug": "usagecue_sheet_composition",
+      "headings": [
+        {
+          "title": "Intro",
+          "depth": 2,
+          "id": "intro"
+        },
+        {
+          "title": "Whitespace Sensitivity",
+          "depth": 2,
+          "id": "whitespace-sensitivity"
+        },
+        {
+          "title": "Anatomy of a Cue Sheet",
+          "depth": 2,
+          "id": "anatomy-of-a-cue-sheet",
+          "headings": [
+            {
+              "title": "Character(s) Declaration Block",
+              "depth": 3,
+              "id": "character(s)-declaration-block"
+            },
+            {
+              "title": "Department(s) Declaration Block",
+              "depth": 3,
+              "id": "department(s)-declaration-block"
+            },
+            {
+              "title": "Act Declaration Block(s)",
+              "depth": 3,
+              "id": "act-declaration-block(s)"
+            },
+            {
+              "title": "Scene Declaration Block(s)",
+              "depth": 3,
+              "id": "scene-declaration-block(s)"
+            },
+            {
+              "title": "Cue Group Declaration(s)",
+              "depth": 3,
+              "id": "cue-group-declaration(s)"
+            },
+            {
+              "title": "Cue Declaration(s)",
+              "depth": 3,
+              "id": "cue-declaration(s)"
+            },
+            {
+              "title": "End Block",
+              "depth": 3,
+              "id": "end-block"
+            }
+          ]
+        },
+        {
+          "title": "Quick Example",
+          "depth": 2,
+          "id": "quick-example"
+        }
+      ]
+    },
+    "usage/CUE_SHEET_RUNNING.html": {
+      "source": "docs/usage/CUE_SHEET_RUNNING.md",
+      "title": "Cue Sheet Running - greater-prompt",
+      "pageTitle": "Cue Sheet Running",
+      "slug": "usagecue_sheet_running",
+      "headings": [
+        {
+          "title": "CLI",
+          "depth": 2,
+          "id": "cli"
+        },
+        {
+          "title": "Example",
+          "depth": 2,
+          "id": "example"
+        }
+      ]
+    },
+    "usage/PDF_GENERATION.html": {
+      "source": "docs/usage/PDF_GENERATION.md",
+      "title": "PDF Generation - greater-prompt",
+      "pageTitle": "PDF Generation",
+      "slug": "usagepdf_generation"
+    },
+    "errors/INTRO.html": {
+      "source": "docs/errors/INTRO.md",
+      "title": "What the @%^!? - greater-prompt",
+      "pageTitle": "What the @%^!?",
+      "slug": "errorsintro"
+    },
+    "errors/ERRORS.html": {
+      "source": "docs/errors/ERRORS.md",
+      "title": "Errors Explained - greater-prompt",
+      "pageTitle": "Errors Explained",
+      "slug": "errorserrors",
+      "headings": [
+        {
+          "title": "TOC",
+          "depth": 2,
+          "id": "toc"
+        },
+        {
+          "title": "Parsing Errors",
+          "depth": 2,
+          "id": "parsing-errors"
+        },
+        {
+          "title": "`NoMatchError`",
+          "depth": 2,
+          "id": "nomatcherror"
+        },
+        {
+          "title": "`AmbiguousError`",
+          "depth": 2,
+          "id": "ambiguouserror"
+        },
+        {
+          "title": "`DuplicateCharacterDeclaration`",
+          "depth": 2,
+          "id": "duplicatecharacterdeclaration"
+        },
+        {
+          "title": "`DuplicateDepartmentDeclaration`",
+          "depth": 2,
+          "id": "duplicatedepartmentdeclaration"
+        },
+        {
+          "title": "`UndeclaredCharacterError`",
+          "depth": 2,
+          "id": "undeclaredcharactererror"
+        },
+        {
+          "title": "`UndeclaredDepartmentError`",
+          "depth": 2,
+          "id": "undeclareddepartmenterror"
+        },
+        {
+          "title": "`UnkownTargetCharacterError`",
+          "depth": 2,
+          "id": "unkowntargetcharactererror"
+        },
+        {
+          "title": "`OutOfOrderOrDuplicateActError`",
+          "depth": 2,
+          "id": "outoforderorduplicateacterror"
+        },
+        {
+          "title": "`OutOfOrderOrDuplicateSceneError`",
+          "depth": 2,
+          "id": "outoforderorduplicatesceneerror"
+        }
+      ]
+    },
+    "design/INTRO.html": {
+      "source": "docs/design/INTRO.md",
+      "title": "Introduction - greater-prompt",
+      "pageTitle": "Introduction",
+      "slug": "designintro",
+      "headings": [
+        {
+          "title": "Motivation",
+          "depth": 2,
+          "id": "motivation"
+        },
+        {
+          "title": "Personal Motivation",
+          "depth": 2,
+          "id": "personal-motivation"
+        },
+        {
+          "title": "What's a Prompt Book?",
+          "depth": 2,
+          "id": "what's-a-prompt-book"
+        },
+        {
+          "title": "Benefits",
+          "depth": 2,
+          "id": "benefits",
+          "headings": [
+            {
+              "title": "Best Practices",
+              "depth": 3,
+              "id": "best-practices"
+            },
+            {
+              "title": "Save Time",
+              "depth": 3,
+              "id": "save-time"
+            },
+            {
+              "title": "No More Excel Sheets",
+              "depth": 3,
+              "id": "no-more-excel-sheets"
+            },
+            {
+              "title": "Easy to Learn",
+              "depth": 3,
+              "id": "easy-to-learn"
+            },
+            {
+              "title": "Color Coded PDFs",
+              "depth": 3,
+              "id": "color-coded-pdfs"
+            },
+            {
+              "title": "Fast",
+              "depth": 3,
+              "id": "fast"
+            }
+          ]
+        }
+      ]
+    },
+    "design/LANGUAGE_DESIGN_DETAILS.html": {
+      "source": "docs/design/LANGUAGE_DESIGN_DETAILS.md",
+      "title": "Language Design Details - greater-prompt",
+      "pageTitle": "Language Design Details",
+      "slug": "designlanguage_design_details",
+      "headings": [
+        {
+          "title": "Data Interpretation",
+          "depth": 2,
+          "id": "data-interpretation"
+        },
+        {
+          "title": "Syntax Design",
+          "depth": 2,
+          "id": "syntax-design"
+        },
+        {
+          "title": "CLI",
+          "depth": 2,
+          "id": "cli"
+        },
+        {
+          "title": "Control Flow",
+          "depth": 2,
+          "id": "control-flow"
+        },
+        {
+          "title": "Footnotes",
+          "depth": 2,
+          "id": "footnotes"
+        }
+      ]
+    },
+    "design/EXAMPLE_PROGRAMS.html": {
+      "source": "docs/design/EXAMPLE_PROGRAMS.md",
+      "title": "Example Programs - greater-prompt",
+      "pageTitle": "Example Programs",
+      "slug": "designexample_programs",
+      "headings": [
+        {
+          "title": "Defining Characters",
+          "depth": 2,
+          "id": "defining-characters"
+        },
+        {
+          "title": "Defining Departments",
+          "depth": 2,
+          "id": "defining-departments"
+        },
+        {
+          "title": "Adding Cues",
+          "depth": 2,
+          "id": "adding-cues"
+        },
+        {
+          "title": "Running",
+          "depth": 2,
+          "id": "running"
+        },
+        {
+          "title": "What next?",
+          "depth": 2,
+          "id": "what-next"
+        }
+      ]
+    },
+    "design/LANGUAGE_IMPLEMENTATION.html": {
+      "source": "docs/design/LANGUAGE_IMPLEMENTATION.md",
+      "title": "Language Implementation - greater-prompt",
+      "pageTitle": "Language Implementation",
+      "slug": "designlanguage_implementation",
+      "headings": [
+        {
+          "title": "Host Language",
+          "depth": 2,
+          "id": "host-language"
+        },
+        {
+          "title": "Running a Program",
+          "depth": 2,
+          "id": "running-a-program",
+          "headings": [
+            {
+              "title": "Parsing",
+              "depth": 3,
+              "id": "parsing"
+            },
+            {
+              "title": "Handling Errors",
+              "depth": 3,
+              "id": "handling-errors"
+            },
+            {
+              "title": "`CueScript` Data Structure",
+              "depth": 3,
+              "id": "cuescript-data-structure"
+            },
+            {
+              "title": "`PromptScript` Data Structure",
+              "depth": 3,
+              "id": "promptscript-data-structure"
+            },
+            {
+              "title": "Cue Resolution Logic",
+              "depth": 3,
+              "id": "cue-resolution-logic"
+            }
+          ]
+        }
+      ]
+    },
+    "design/EVALUATION.html": {
+      "source": "docs/design/EVALUATION.md",
+      "title": "Evaluation - greater-prompt",
+      "pageTitle": "Evaluation",
+      "slug": "designevaluation"
     }
   },
   "sources": {
     "README.md": "index.html",
+    "docs/installation/DEPENDENCIES.md": "installation/DEPENDENCIES.html",
+    "docs/installation/CLI.md": "installation/CLI.html",
+    "docs/usage/CUE_SHEET_COMPOSITION.md": "usage/CUE_SHEET_COMPOSITION.html",
+    "docs/usage/CUE_SHEET_RUNNING.md": "usage/CUE_SHEET_RUNNING.html",
+    "docs/usage/PDF_GENERATION.md": "usage/PDF_GENERATION.html",
+    "docs/errors/INTRO.md": "errors/INTRO.html",
+    "docs/errors/ERRORS.md": "errors/ERRORS.html",
+    "docs/design/INTRO.md": "design/INTRO.html",
+    "docs/design/LANGUAGE_DESIGN_DETAILS.md": "design/LANGUAGE_DESIGN_DETAILS.html",
+    "docs/design/EXAMPLE_PROGRAMS.md": "design/EXAMPLE_PROGRAMS.html",
+    "docs/design/LANGUAGE_IMPLEMENTATION.md": "design/LANGUAGE_IMPLEMENTATION.html",
+    "docs/design/EVALUATION.md": "design/EVALUATION.html",
     "docs/docpress.json": "docpress.json",
+    "docs/api/AST.html": "api/AST.html",
+    "docs/api/Errors.html": "api/Errors.html",
+    "docs/api/Interp.html": "api/Interp.html",
+    "docs/api/Main.html": "api/Main.html",
+    "docs/api/Parser.html": "api/Parser.html",
+    "docs/api/Renderer.html": "api/Renderer.html",
+    "docs/api/SampleScript.html": "api/SampleScript.html",
+    "docs/api/Utils.html": "api/Utils.html",
+    "docs/api/doc-index.html": "api/doc-index.html",
+    "docs/api/frames.html": "api/frames.html",
+    "docs/api/haddock-util.js": "api/haddock-util.js",
+    "docs/api/greater-prompt.haddock": "api/greater-prompt.haddock",
+    "docs/api/index-frames.html": "api/index-frames.html",
+    "docs/api/hslogo-16.png": "api/hslogo-16.png",
+    "docs/api/index.html": "api/index.html",
+    "docs/api/mini_Errors.html": "api/mini_Errors.html",
+    "docs/api/mini_AST.html": "api/mini_AST.html",
+    "docs/api/mini_Interp.html": "api/mini_Interp.html",
+    "docs/api/mini_Main.html": "api/mini_Main.html",
+    "docs/api/mini_Parser.html": "api/mini_Parser.html",
+    "docs/api/mini_Renderer.html": "api/mini_Renderer.html",
+    "docs/api/mini_SampleScript.html": "api/mini_SampleScript.html",
+    "docs/api/mini_Utils.html": "api/mini_Utils.html",
+    "docs/api/minus.gif": "api/minus.gif",
+    "docs/api/ocean.css": "api/ocean.css",
+    "docs/api/plus.gif": "api/plus.gif",
+    "docs/api/synopsis.png": "api/synopsis.png",
     "docs/assets/custom.css": "assets/custom.css",
     "docs/images/exampleRendering.png": "images/exampleRendering.png"
   }

@@ -1,6 +1,6 @@
 {
   "docs": "docs",
-  "github": "rwoll-hmc/project",
+  "github": "rwoll/project",
   "markdown": {
     "plugins": {
       "emoji": {},

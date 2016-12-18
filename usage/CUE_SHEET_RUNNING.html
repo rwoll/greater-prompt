@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../assets/custom.css?t=de6ee9d9">
+    <script src="../assets/script.js?t=42463e55"></script>
+    <title>Cue Sheet Running - greater-prompt</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1"><a class="link title  link-index" href="../index.html">greater-prompt</a>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Installation</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-installationdependencies" href="../installation/DEPENDENCIES.html">Installing Dependencies</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-installationcli" href="../installation/CLI.html">CLI Setup</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Usage</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-usagecue_sheet_composition" href="../usage/CUE_SHEET_COMPOSITION.html">Cue Sheet Composition</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title -active link-usagecue_sheet_running" href="../usage/CUE_SHEET_RUNNING.html">Cue Sheet Running</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a class="hlink link-cli" href="#cli">CLI</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a class="hlink link-example" href="#example">Example</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-usagepdf_generation" href="../usage/PDF_GENERATION.html">PDF Generation</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Errors</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-errorsintro" href="../errors/INTRO.html">What the @%^!?</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-errorserrors" href="../errors/ERRORS.html">Errors Explained</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Design Principles</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-designintro" href="../design/INTRO.html">Introduction</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-designlanguage_design_details" href="../design/LANGUAGE_DESIGN_DETAILS.html">Language Design Details</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-designexample_programs" href="../design/EXAMPLE_PROGRAMS.html">Example Programs</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-designlanguage_implementation" href="../design/LANGUAGE_IMPLEMENTATION.html">Language Implementation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-designevaluation" href="../design/EVALUATION.html">Evaluation</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+      <div class="body page-usagecue_sheet_running">
+        <div class="header-nav">
+          <div class="right"><a class="iconlink" href="https://github.com/rwoll/project" data-title="rwoll/project">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="cue-sheet-running">Cue Sheet Running</h1>
+<h2 id="cli">CLI</h2>
+<p>To run a cue sheet, you will use the command line interface <code>greater-prompt</code>:</p>
+<pre><code>greater-prompt
+usage : greater-prompt [infile] [outfile] [-s] [-l] [-h] [--version]
+
+optional arguments:
+ infile                        Source to input file. By default
+                               this is stdin.
+ outfile                       Destination to output file. By
+                               default script.tex
+ -s, --silent                  Turn off the verbosity
+ -l, --latex-off               Turns off automatic call to
+                               latexmk
+ -h, --help                    show this help message and exit
+ --version                     print the program version and exit
+</code></pre>
+<h2 id="example">Example</h2>
+<p>Paste the following into a file named <code>Hamlet.txt</code>:</p>
+<pre><code>Characters:
+  @BARNARDO
+  @POLONIUS
+  @FRANCISCO
+
+Departments:
+  #LX
+  #SD
+  #BS
+
+Act 1:
+  Scene 1:
+    (line) @BARNARDO:&quot;Who&apos;s there?&quot;
+      #LX {1} STBY &quot;t&quot;
+      #SD {1} GO &quot;comment 2&quot;
+      #BS {1} WARN
+
+    (line) @FRANCISCO:&quot;Not a mouse stirring.&quot;
+      #LX {1} GO
+
+Act 2:
+  Scene 1:
+    (line) @POLONIUS:&quot;Give him this money&quot;
+      #LX {2} STBY &quot;this is a comment on this cue&quot;
+      #SD {2} GO &quot;comment 2&quot;
+      #BS {2} WARN
+
+--- END ---
+</code></pre>
+<p>Then run:</p>
+<pre><code>$ greater-prompt --latex-off Hamlet.txt HamletScriptAnnotated.tex
+</code></pre>
+<p>This will output a <code>.tex</code> file annotated with your cues.</p>
+<p>Play around with the language by adding more cues to the example file. Make typos
+in names and departments and have some fun getting errors. &#x1F603;</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../usage/CUE_SHEET_COMPOSITION.html"><span class="title">Cue Sheet Composition</span></a></div>
+          <div class="right"><a href="../usage/PDF_GENERATION.html"><span class="label">Next: </span><span class="title">PDF Generation</span></a></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
