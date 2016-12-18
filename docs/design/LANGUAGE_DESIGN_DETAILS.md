@@ -42,7 +42,7 @@ An example cue sheet for Hamlet!
 
 which, when run through the program with rendering on, outputs:
 
-![](https://raw.githubusercontent.com/rwoll-hmc/project/master/hamletExample.png)
+![](https://raw.githubusercontent.com/rwoll/project/master/hamletExample.png)
 
 into a PDF as well as a `.tex` file.
 

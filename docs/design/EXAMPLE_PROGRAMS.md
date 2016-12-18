@@ -1,7 +1,7 @@
 Example Programs
 ================
 
-In addition to the example in the [examples folder](https://github.com/rwoll-hmc/project/tree/master/examples)
+In addition to the example in the [examples folder](https://github.com/rwoll/project/tree/master/examples)
 and the one described in the [Cue Sheet Composition Section](../usage/CUE_SHEET_COMPOSITION.md),
 we will walk through annotating *Hamlet*:
 
@@ -77,7 +77,7 @@ $ greater-prompt example.txt
 
 we get a `.tex` output and a `script.pdf`:
 
-![](https://raw.githubusercontent.com/rwoll-hmc/project/master/hamletExample1.png)
+![](https://raw.githubusercontent.com/rwoll/project/master/hamletExample1.png)
 
 Congrats! We have successfully annotated a script!
 
@@ -110,7 +110,7 @@ Act 1:
 
 Running the program again, we get:
 
-![](https://raw.githubusercontent.com/rwoll-hmc/project/master/hamletExample2.png)
+![](https://raw.githubusercontent.com/rwoll/project/master/hamletExample2.png)
 
 :eyes: Notice how we ommitted the `?` from the line in our specification of the
 cue placement? We can ommit as much of line as we want as long as it it unique

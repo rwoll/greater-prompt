@@ -9,7 +9,7 @@
 > __annotations__
 
 
-![Build Status](https://travis-ci.org/rwoll-hmc/project.svg?branch=master)
+![Build Status](https://travis-ci.org/rwoll/project.svg?branch=master)
 
 \> Prompt (*greater prompt*) is a [domain specific language (DSL)][dsl-def] for
 easily expressing and controlling cue placements in a theatrical script or [prompt

@@ -38,7 +38,7 @@ Finally, if all cues can be merged and resolved uniquely, then the output is
 put through a renderer which outputs raw text into a LaTeX file that can then
 be rendered into a PDF.
 
-If you look through [`src/Main.hs`](https://github.com/rwoll-hmc/project/blob/master/src/Main.hs),
+If you look through [`src/Main.hs`](https://github.com/rwoll/project/blob/master/src/Main.hs),
 each line roughly corresponds to a step in this process.
 
 ### Parsing
@@ -74,7 +74,7 @@ is moved up a level as keys in the map. This presented a challenge, although
 `mapAccumWithKey` came in handy.
 
 The `PromptScript` data structure has three purposes:
-  1. Encode original, unannotated script: [src/SampleScript.hs](https://github.com/rwoll-hmc/project/blob/master/src/SampleScript.hs)
+  1. Encode original, unannotated script: [src/SampleScript.hs](https://github.com/rwoll/project/blob/master/src/SampleScript.hs)
   2. Encode the cue sheet after initial compilation.
   3. Encode the final annotated script.
 

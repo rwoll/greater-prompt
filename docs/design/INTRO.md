@@ -56,7 +56,7 @@ Act 2:
 
 and generate the annotated script in an instant:
 
-![](https://raw.githubusercontent.com/rwoll-hmc/project/master/hamletExample.png).
+![](https://raw.githubusercontent.com/rwoll/project/master/hamletExample.png).
 
 ## Personal Motivation
 

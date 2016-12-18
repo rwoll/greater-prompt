@@ -19,7 +19,7 @@ synopsis:            DSL tool for script cue annotations.
 -- description:
 
 -- URL for the project homepage or repository.
-homepage:            https://github.com/rwoll-hmc/project
+homepage:            https://github.com/rwoll/project
 
 -- The license under which the package is released.
 license:             MIT
